@@ -34,305 +34,157 @@
       margin: 0; padding: 0;
       font-family: 'Inter', sans-serif;
       background: #101820;
-      color: #f4f6fb;
-      line-height: 1.5;
-      min-height: 100vh;
-      font-size: 1.06rem;
+      color: #ffffff;
+      line-height: 1.6;
     }
-    .container {
-      max-width: 750px;
-      margin: 0 auto;
-      padding: 24px;
-    }
-    header, section {
-      margin-bottom: 52px;
-    }
-    header {
-      text-align: center;
-      padding: 48px 0 32px 0;
-    }
-    header h1 {
-      font-size: 2.6rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 12px;
-    }
-    header h2 {
-      font-size: 1.3rem;
-      font-weight: 500;
-      color: #88a1d2;
-      margin-bottom: 24px;
-    }
+    /* Utility classes */
     .cta-btn {
       background: #2979ff;
       color: #fff;
-      padding: 16px 28px;
-      border-radius: 8px;
+      padding: 12px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: background 0.3s;
       border: none;
-      font-size: 1.1rem;
-      font-weight: 600;
       cursor: pointer;
-      box-shadow: 0 2px 14px 0 rgba(41,121,255,0.12);
-      transition: background 0.15s;
-      margin-top: 16px;
-      margin-bottom: 8px;
-      display: inline-block; text-decoration: none;
     }
-    .cta-btn:hover { background: #2979ffcc; }
-    .trust-bar {
-      margin-top: 16px;
-      color: #bfcadf;
-      font-size: 1rem;
-      font-weight: 500;
+    .cta-btn:hover { background: #1e5bbf; }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
     }
-    h3, .section-title {
-      font-size: 1.35rem;
-      font-weight: 600;
-      color: #fff;
-      margin-bottom: 14px;
-    }
-    .problem-solution {
-      background: #192539;
-      border-radius: 6px;
-      padding: 28px 18px;
-      box-shadow: 0 1px 8px 0 rgba(41,121,255,0.02);
-      margin-bottom: 42px;
-    }
-    .services-list {
+    h1, h2, h3 { color: #fff; }
+    h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    h2 { font-size: 2rem; margin: 2rem 0 1rem; }
+    p { font-size: 1.1rem; color: #ccc; }
+    /* Header */
+    header {
+      padding: 1rem 2rem;
+      background: #1a1f2e;
       display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin-bottom: 32px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo { font-size: 1.5rem; font-weight: 700; color: #2979ff; text-decoration: none; }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 2rem;
+      transition: color 0.3s;
+    }
+    header nav a:hover { color: #2979ff; }
+    /* Hero Section */
+    #hero {
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+    #hero h1 {
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+    #hero p {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+    /* Services Section */
+    #services {
+      background: #1a1f2e;
+      padding: 4rem 2rem;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
     }
     .service-card {
-      flex: 1 1 260px;
-      background: #142038;
-      border-radius: 7px;
-      padding: 20px 18px;
-      box-shadow: 0 1px 10px rgba(41,121,255,0.07);
-      min-width: 220px;
+      background: #242b3d;
+      padding: 2rem;
+      border-radius: 8px;
+      transition: transform 0.3s;
     }
-    .service-card h4 {
-      color: #2979ff;
-      font-size: 1.1rem;
-      margin-bottom: 12px;
-      font-weight: 600;
-    }
-    .service-card p {
-      color: #dde8ff;
-      font-size: 0.98rem;
-      font-weight: 500;
-      margin-bottom: 10px;
-    }
-    .service-price { color: #08e7cf; font-weight: 600; font-size: 1rem; }
-    .social-proof {
-      background: #15203a;
-      padding: 18px;
-      border-radius: 5px;
-      color: #aed5fa;
-      font-size: 0.98rem;
-      margin-bottom: 40px;
-      font-style: italic;
-    }
-    .steps-list {
-      list-style: none;
-      padding: 0; margin: 8px 0 24px 0;
-    }
-    .steps-list li {
-      margin-bottom: 14px;
-      background: #192539;
-      border-left: 4px solid #08e7cf;
-      padding: 12px 16px;
-      border-radius: 4px;
-      font-size: 1rem;
-      color: #b2d2ff;
-      font-weight: 500;
-    }
-    .premium-section {
-      padding: 18px;
-      background: #233772;
-      border-radius: 6px;
-      color: #fff;
-      margin-bottom: 24px;
-      font-size: 1.09rem;
-      font-weight: 500;
-    }
-    .limited-spots {
-      color: #fbe299;
-      font-weight: 700;
-      margin-top: 8px;
-      font-size: 1.01rem;
-    }
-    .contact-section {
+    .service-card:hover { transform: translateY(-5px); }
+    .service-card h3 { color: #2979ff; margin-top: 0; }
+    /* CTA Section */
+    #cta {
       text-align: center;
-      padding: 28px 0 8px 0;
-      background: #101820;
+      padding: 4rem 2rem;
     }
-    .contact-section p {
-      color: #d2ebff;
-      font-size: 1.05rem;
-      font-weight: 600;
-      margin-bottom: 10px;
+    #cta h2 { margin-bottom: 2rem; }
+    /* Footer */
+    footer {
+      background: #0d1117;
+      padding: 2rem;
+      text-align: center;
+      color: #999;
     }
-    .contact-email {
-      color: #2979ff;
-      font-weight: 700;
-      font-size: 1.09rem;
-      text-decoration: underline;
-      letter-spacing: 0.5px;
-      margin-bottom: 6px;
-      display: block;
-      word-break: break-all;
-    }
-    .booking-link {
-      background: #08e7cf;
-      color: #101820;
-      padding: 13px 22px;
-      border-radius: 7px;
-      font-size: 1.11rem;
-      font-weight: 700;
-      text-decoration: none;
-      display: inline-block;
-      margin: 10px 0;
-      transition: background .17s;
-    }
-    .booking-link:hover { background: #08e7cfcc; }
-    .closing-statement {
-      font-size: 1.13rem;
-      margin-top: 14px;
-      color: #fff;
-      font-weight: 600;
-    }
-    /* Mobile Styles */
-    @media (max-width: 600px) {
-      .container { padding: 12px;}
-      header h1 { font-size: 1.43rem;}
-      .services-list { flex-direction: column;}
-      .service-card { min-width: 0; margin-bottom: 8px;}
-      .steps-list li { font-size: 0.97rem;}
-    }
-    /* Animations */
-    [data-animate] { opacity: 0; transform: translateY(32px); transition: all 0.65s cubic-bezier(.18,.8,.45,1); }
-    [data-animate].visible { opacity: 1; transform: translateY(0);}
+    footer p { color: #666; }
+    footer a { color: #2979ff; text-decoration: none; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1 data-animate>Stop Competing on Time. Start Winning on Results.</h1>
-      <h2 data-animate>AI-powered agency that delivers what 5-person teams do—faster, smarter, and with predictable monthly pricing.</h2>
-      <a href="https://calendly.com/yourcalendly" class="cta-btn" target="_blank" data-animate>Book Free Strategy Call</a>
-      <div class="trust-bar" data-animate>Delivering results for businesses making $500K-$5M annually</div>
-    </header>
+  <!-- Header -->
+  <header>
+    <a href="#" class="logo">Thraizo</a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#cta">Contact</a>
+    </nav>
+  </header>
 
-    <section class="problem-solution">
-      <h3 class="section-title" data-animate>The Problem</h3>
-      <p data-animate>Businesses waste 20+ hours weekly on repetitive tasks, hire expensive teams that don’t scale, and lack technical expertise to implement AI themselves.</p>
-      <h3 class="section-title" data-animate>The Solution</h3>
-      <p data-animate>Thraizo engineers custom AI systems directly into your operations—creating leverage that multiplies output without multiplying costs.</p>
-    </section>
-
-    <section>
-      <h3 class="section-title" data-animate>What We Do</h3>
-      <div class="services-list">
-        <div class="service-card" data-animate>
-          <h4>AI Customer Support Automation</h4>
-          <p>Custom chatbots and email flows empower your support team—boost client satisfaction & lower costs, hands-free.</p>
-          <div class="service-price">Starting at $1,200/month</div>
-        </div>
-        <div class="service-card" data-animate>
-          <h4>Content & SEO Systems</h4>
-          <p>Automated pipelines for blogs, social & search; dominate rankings without a content team.</p>
-          <div class="service-price">Starting at $1,200/month</div>
-        </div>
-        <div class="service-card" data-animate>
-          <h4>Lead Generation Automation</h4>
-          <p>Intelligent outreach & qualification—more prospects, less grind, faster results.</p>
-          <div class="service-price">Starting at $1,200/month</div>
-        </div>
-        <div class="service-card" data-animate>
-          <h4>Process Automation</h4>
-          <p>Automate repetitive business workflows—error-free execution, scalably.</p>
-          <div class="service-price">Starting at $1,200/month</div>
-        </div>
-      </div>
-    </section>
-
-    <div class="social-proof" data-animate>
-      Working with growing businesses in e-commerce, marketing, and SaaS sectors. Led by a founder with deep expertise in Chrome extension development, AI systems engineering, and automation.
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="container">
+      <h1>AI-Powered Agency That Delivers Enterprise Results</h1>
+      <p>We engineer custom AI systems that drive real ROI. Stop overpaying for agency-level work. Get started with retainers from $1,200/month.</p>
+      <a class="cta-btn" data-animate="" href="https://calendly.com/hi-thraizo/strategy-call" target="_blank" rel="noopener">Book Free Strategy Call</a>
     </div>
+  </section>
 
-    <section>
-      <h3 class="section-title" data-animate>How It Works</h3>
-      <ul class="steps-list">
-        <li data-animate>Discovery Call – Identify biggest leverage points in your business.</li>
-        <li data-animate>Custom AI System Design – Engineer automated solutions for your workflows.</li>
-        <li data-animate>Ongoing Optimization – Monthly retainer, continuous improvement & support.</li>
-      </ul>
-    </section>
-
-    <section class="premium-section" data-animate>
-      <span>We don't compete on price—we compete on results. When our AI systems save you 20 hours/week or generate an extra $5k/month, a $1,500 retainer becomes your best investment.</span>
-      <div class="limited-spots">Limited monthly spots available – quality over quantity.</div>
-    </section>
-
-    <section class="contact-section">
-      <p data-animate>Contact Anytime</p>
-      <a class="contact-email" href="mailto:hi@thraizo.com">hi@thraizo.com</a>
-      <a href="https://calendly.com/yourcalendly" class="booking-link" target="_blank">Book Your Strategy Call</a>
-      <div class="closing-statement" data-animate>
-        Ready to multiply your results? Secure your spot and experience premium, enterprise-grade AI implementation without agency bloat.
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <h2>What We Do</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>🤖 AI Automation</h3>
+          <p>Streamline operations with intelligent workflows that run 24/7. From customer support to data processing.</p>
+        </div>
+        <div class="service-card">
+          <h3>🚀 Custom AI Solutions</h3>
+          <p>Tailored systems built on cutting-edge LLMs and ML frameworks to solve your unique challenges.</p>
+        </div>
+        <div class="service-card">
+          <h3>📈 Implementation & Support</h3>
+          <p>We don't just build—we deploy, maintain, and optimize your AI systems for maximum ROI.</p>
+        </div>
       </div>
-      <!-- Minimal Formspree/EmailJS Contact Form -->
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="cta">
+    <div class="container">
+      <h2>Ready to Transform Your Business?</h2>
+      <p>Book a free strategy call. No sales pitch—just actionable insights tailored to your business.</p>
+      <a class="booking-link" href="https://calendly.com/hi-thraizo/strategy-call" target="_blank" rel="noopener">Schedule Your Call Now</a>
+      <br><br>
+      <p>Or reach out via email:</p>
       <form action="https://formspree.io/f/xgerldwj" method="POST" style="margin-top:16px;">
         <input type="email" name="email" required placeholder="Your Email" style="padding:10px; border-radius:5px; border:1px solid #2979ff; margin-right:8px;">
         <input type="text" name="message" required placeholder="Project Brief / Questions" style="padding:10px; border-radius:5px; border:1px solid #2979ff;">
         <button type="submit" class="cta-btn" style="margin-top:8px;">Send Message</button>
       </form>
-    </section>
-  </div>
-
-  <!-- Exit Intent Popup (Lead Magnet) -->
-  <div id="exit-popup" style="display:none;position:fixed;z-index:99;left:0;top:0;width:100vw;height:100vh;background:rgba(30,34,50,0.89);align-items:center;justify-content:center;">
-    <div style="background:#fff;padding:32px 30px;border-radius:10px;max-width:330px;text-align:center;box-shadow:0 4px 18px #15203a;">
-      <h3 style="color:#2979ff;margin-bottom:12px;">Free AI Strategy Guide</h3>
-      <p style="color:#2d395a;font-size:1rem;margin-bottom:20px;">
-        Get an instant PDF: “How SMBs Can 10x Efficiency with AI”. Enter your email below.
-      </p>
-      <form action="https://formspree.io/f/xgerldwj" method="POST">
-        <input type="email" name="email" required placeholder="Your Email" style="padding:9px 11px;margin-bottom:10px;border-radius:5px;border:1px solid #2979ff;width:100%;">
-        <button type="submit" class="cta-btn" style="width:100%;">Get Guide</button>
-      </form>
-      <button onclick="document.getElementById('exit-popup').style.display='none'" style="background:none;border:none;font-weight:700;color:#2979ff;margin-top:14px;cursor:pointer;">No thanks</button>
     </div>
-  </div>
+  </section>
 
-  <!-- Smooth Scroll Animations -->
-  <script>
-    // Intersection Observer for section fade-ins
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
-
-    // Exit Intent Popup for desktop
-    let popupFired = false;
-    window.addEventListener('mouseout', e => {
-      if (!popupFired && e.clientY < 12 && window.innerWidth > 700) {
-        document.getElementById('exit-popup').style.display = 'flex';
-        popupFired = true;
-      }
-    });
-  </script>
-  <!-- Google Analytics 4 (replace with your GA ID) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Thraizo. All rights reserved.</p>
+    <p><a href="mailto:hi@thraizo.com">hi@thraizo.com</a></p>
+  </footer>
 </body>
 </html>
