@@ -27,7 +27,7 @@ export default function UpgradeModal({ onClose }: UpgradeModalProps) {
       }
     } catch {
       // Fallback: demo mode activation
-      setError('Stripe not configured. Activating demo premium mode...')
+      setError('Lemon Squeezy not configured. Activating demo premium mode...')
       setTimeout(() => {
         setPremium(true)
         onClose()

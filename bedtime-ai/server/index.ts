@@ -1,7 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import { generateStoryHandler } from './story'
-import { createCheckoutHandler } from './stripe'
+import { createCheckoutHandler } from './checkout'
 
 const app = express()
 const PORT = process.env.PORT || 3001

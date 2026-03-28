@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "@stripe/stripe-js": "^9.0.0"
+    "@lemonsqueezy/lemonsqueezy.js": "^4.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",

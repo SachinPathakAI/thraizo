@@ -10,7 +10,7 @@ npm install
 
 # Copy and configure environment
 cp .env.example .env
-# Add at least one AI API key (GROK_API_KEY, OPENAI_API_KEY, or ANTHROPIC_API_KEY)
+# Add your OpenAI API key (required), plus optional Lemon Squeezy keys for payments
 
 # Start the API server
 npm run server
@@ -24,7 +24,7 @@ Open [http://localhost:5173](http://localhost:5173) and create your first story!
 ## Features
 
 - **Personalized Stories** — Name, age, interests, pets, mood, and theme
-- **AI-Powered** — xAI Grok, OpenAI, or Anthropic with automatic fallback
+- **AI-Powered** — OpenAI (primary), with xAI Grok and Anthropic as fallback
 - **Read-Along** — Word highlighting synced with narration
 - **Audio Narration** — Browser SpeechSynthesis with speed control
 - **Sleep Sounds** — Rain, ocean, white noise ambient backgrounds
@@ -37,7 +37,7 @@ Open [http://localhost:5173](http://localhost:5173) and create your first story!
 - React 18 + TypeScript + Vite
 - Tailwind CSS (custom dream theme)
 - Express API server
-- Stripe Checkout for payments
+- Lemon Squeezy for payments
 - Web Audio API for sleep sounds
 - SpeechSynthesis API for narration
 

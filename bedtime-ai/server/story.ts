@@ -135,8 +135,8 @@ async function callAnthropicAPI(systemPrompt: string, userPrompt: string): Promi
 
 async function generateWithFallback(systemPrompt: string, userPrompt: string): Promise<string> {
   const providers = [
-    { name: 'Grok', fn: callGrokAPI, key: 'GROK_API_KEY' },
     { name: 'OpenAI', fn: callOpenAIAPI, key: 'OPENAI_API_KEY' },
+    { name: 'Grok', fn: callGrokAPI, key: 'GROK_API_KEY' },
     { name: 'Anthropic', fn: callAnthropicAPI, key: 'ANTHROPIC_API_KEY' },
   ]
 
