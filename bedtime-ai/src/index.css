@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-night-950 text-white antialiased;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    @apply bg-dream-400/30;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-night-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-dream-600 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-dream-500;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-night-800/50 backdrop-blur-md border border-night-600/30 rounded-2xl;
+  }
+
+  .dream-gradient {
+    background: linear-gradient(135deg, #1a1033 0%, #0a1128 50%, #121e3d 100%);
+  }
+
+  .dream-btn {
+    @apply px-6 py-3 bg-gradient-to-r from-dream-500 to-dream-400 hover:from-dream-400 hover:to-dream-300
+           text-white font-bold rounded-xl shadow-lg shadow-dream-500/25
+           transition-all duration-300 hover:shadow-dream-400/40 hover:scale-[1.02]
+           active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+  }
+
+  .star {
+    @apply absolute rounded-full bg-white animate-twinkle;
+  }
+}
+
+/* Read-along highlight */
+.word-highlight {
+  @apply bg-dream-400/30 rounded px-0.5 transition-colors duration-200;
+}
+
+/* Slide-in animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+/* Pulse for generating state */
+@keyframes dreampulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-dreampulse {
+  animation: dreampulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
