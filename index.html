@@ -419,6 +419,11 @@
       transform: translateY(28px);
       animation: wordUp 780ms cubic-bezier(.2,.8,.2,1) forwards;
       animation-delay: calc(var(--i) * 55ms + 260ms);
+      animation-delay: calc(var(--i) * 55ms + 260ms);
+      background: linear-gradient(135deg, #ffffff 0%, #a5f3fc 35%, #c4b5fd 72%, #ffffff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     @keyframes wordUp {
