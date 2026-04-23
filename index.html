@@ -1,190 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- SEO Essentials -->
-  <title>Thraizo – AI-Powered Agency That Delivers Enterprise Results</title>
-  <meta name="description" content="Custom AI systems for growing businesses. Get agency-level output without agency-level costs. Monthly retainers from $1,200. Book your strategy call.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <!-- Primary Keywords for SEO -->
-  <meta name="keywords" content="AI automation agency, AI-powered business solutions, AI implementation services">
-  <!-- Schema Markup -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Thraizo",
-      "url": "https://thraizo.com",
-      "email": "hi@thraizo.com",
-      "description": "AI-powered agency engineering custom AI systems for SMBs.",
-      "areaServed": "Worldwide",
-      "contactPoint": [{
-        "@type": "ContactPoint",
-        "email": "hi@thraizo.com",
-        "contactType": "customer support"
-      }]
-    }
-  </script>
-  <!-- Fonts: Inter (Google Fonts) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Minimal CSS Reset and Main Styles -->
-  <style>
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0; padding: 0;
-      font-family: 'Inter', sans-serif;
-      background: #101820;
-      color: #ffffff;
-      line-height: 1.6;
-    }
-    /* Utility classes */
-    .cta-btn {
-      background: #2979ff;
-      color: #fff;
-      padding: 12px 24px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: 600;
-      display: inline-block;
-      transition: background 0.3s;
-      border: none;
-      cursor: pointer;
-    }
-    .cta-btn:hover { background: #1e5bbf; }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-    h1, h2, h3 { color: #fff; }
-    h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-    h2 { font-size: 2rem; margin: 2rem 0 1rem; }
-    p { font-size: 1.1rem; color: #ccc; }
-    /* Header */
-    header {
-      padding: 1rem 2rem;
-      background: #1a1f2e;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header .logo { font-size: 1.5rem; font-weight: 700; color: #2979ff; text-decoration: none; }
-    header nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 2rem;
-      transition: color 0.3s;
-    }
-    header nav a:hover { color: #2979ff; }
-    /* Hero Section */
-    #hero {
-      text-align: center;
-      padding: 6rem 2rem;
-    }
-    #hero h1 {
-      max-width: 800px;
-      margin: 0 auto 2rem;
-    }
-    #hero p {
-      max-width: 600px;
-      margin: 0 auto 2rem;
-    }
-    /* Services Section */
-    #services {
-      background: #1a1f2e;
-      padding: 4rem 2rem;
-    }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .service-card {
-      background: #242b3d;
-      padding: 2rem;
-      border-radius: 8px;
-      transition: transform 0.3s;
-    }
-    .service-card:hover { transform: translateY(-5px); }
-    .service-card h3 { color: #2979ff; margin-top: 0; }
-    /* CTA Section */
-    #cta {
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-    #cta h2 { margin-bottom: 2rem; }
-    /* Footer */
-    footer {
-      background: #0d1117;
-      padding: 2rem;
-      text-align: center;
-      color: #999;
-    }
-    footer p { color: #666; }
-    footer a { color: #2979ff; text-decoration: none; }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Thraizo | AI Growth Systems</title>
+<meta name="description" content="Thraizo helps agencies and service businesses get more qualified clients using AI-powered outbound systems.">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  color:#111;
+  background:#fff;
+  line-height:1.6;
+}
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+header{
+  position:sticky;
+  top:0;
+  background:#fff;
+  border-bottom:1px solid #eee;
+  z-index:100;
+}
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 0;
+}
+.logo{
+  font-size:28px;
+  font-weight:700;
+}
+.logo small{
+  display:block;
+  font-size:11px;
+  letter-spacing:3px;
+  color:#666;
+}
+.btn{
+  display:inline-block;
+  background:#111;
+  color:#fff;
+  padding:14px 24px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+}
+.btn-outline{
+  background:#fff;
+  color:#111;
+  border:2px solid #111;
+}
+.hero{
+  padding:90px 0;
+}
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+.tag{
+  display:inline-block;
+  background:#f4f4f4;
+  padding:8px 14px;
+  border-radius:20px;
+  font-size:14px;
+  margin-bottom:20px;
+}
+h1{
+  font-size:54px;
+  line-height:1.1;
+  margin-bottom:25px;
+}
+p.lead{
+  font-size:20px;
+  color:#555;
+  margin-bottom:30px;
+}
+.hero-box{
+  background:#111;
+  color:#fff;
+  padding:40px;
+  border-radius:18px;
+}
+.hero-box h3{
+  margin-bottom:20px;
+}
+.hero-box div{
+  margin:15px 0;
+}
+section{
+  padding:80px 0;
+}
+.light{
+  background:#f8f8f8;
+}
+h2{
+  font-size:40px;
+  margin-bottom:20px;
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  margin-top:30px;
+}
+.card{
+  background:#fff;
+  border:1px solid #eee;
+  padding:28px;
+  border-radius:14px;
+}
+.steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+.step{
+  background:#fff;
+  padding:30px;
+  border-radius:14px;
+  border:1px solid #eee;
+}
+.step-number{
+  font-size:42px;
+  font-weight:bold;
+  color:#ddd;
+}
+.contact-box{
+  max-width:600px;
+  margin:auto;
+  text-align:center;
+}
+.contact-card{
+  margin-top:30px;
+  padding:30px;
+  border:1px solid #eee;
+  border-radius:16px;
+}
+.contact-card a{
+  color:#111;
+  text-decoration:none;
+}
+footer{
+  border-top:1px solid #eee;
+  padding:30px 0;
+  text-align:center;
+  color:#666;
+}
+@media(max-width:900px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+  h1{
+    font-size:40px;
+  }
+  h2{
+    font-size:32px;
+  }
+}
+</style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <a href="#" class="logo">Thraizo</a>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#cta">Contact</a>
-    </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="container">
-      <h1>AI-Powered Agency That Delivers Enterprise Results</h1>
-      <p>We engineer custom AI systems that drive real ROI. Stop overpaying for agency-level work. Get started with retainers from $1,200/month.</p>
-      <a class="cta-btn" data-animate="" href="https://calendly.com/hi-thraizo/strategy-call" target="_blank" rel="noopener">Book Free Strategy Call</a>
-    </div>
-  </section>
+<header>
+<div class="container">
+<nav>
+<div class="logo">
+THRAIZO
+<small>AI GROWTH SYSTEMS</small>
+</div>
+<a href="#contact" class="btn">Free Growth Audit</a>
+</nav>
+</div>
+</header>
 
-  <!-- Services Section -->
-  <section id="services">
-    <div class="container">
-      <h2>What We Do</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>🤖 AI Automation</h3>
-          <p>Streamline operations with intelligent workflows that run 24/7. From customer support to data processing.</p>
-        </div>
-        <div class="service-card">
-          <h3>🚀 Custom AI Solutions</h3>
-          <p>Tailored systems built on cutting-edge LLMs and ML frameworks to solve your unique challenges.</p>
-        </div>
-        <div class="service-card">
-          <h3>📈 Implementation & Support</h3>
-          <p>We don't just build—we deploy, maintain, and optimize your AI systems for maximum ROI.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="hero">
+<div class="container grid">
 
-  <!-- CTA Section -->
-  <section id="cta">
-    <div class="container">
-      <h2>Ready to Transform Your Business?</h2>
-      <p>Book a free strategy call. No sales pitch—just actionable insights tailored to your business.</p>
-      <a class="booking-link" href="https://calendly.com/hi-thraizo/strategy-call" target="_blank" rel="noopener">Schedule Your Call Now</a>
-      <br><br>
-      <p>Or reach out via email:</p>
-      <form action="https://formspree.io/f/xgerldwj" method="POST" style="margin-top:16px;">
-        <input type="email" name="email" required placeholder="Your Email" style="padding:10px; border-radius:5px; border:1px solid #2979ff; margin-right:8px;">
-        <input type="text" name="message" required placeholder="Project Brief / Questions" style="padding:10px; border-radius:5px; border:1px solid #2979ff;">
-        <button type="submit" class="cta-btn" style="margin-top:8px;">Send Message</button>
-      </form>
-    </div>
-  </section>
+<div>
+<div class="tag">Built for Agencies & Service Businesses</div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Thraizo. All rights reserved.</p>
-    <p><a href="mailto:hi@thraizo.com">hi@thraizo.com</a></p>
-  </footer>
+<h1>Get More Clients With AI-Powered Outbound Systems</h1>
+
+<p class="lead">
+We help ambitious businesses generate qualified meetings through targeted prospecting, cold email, LinkedIn outreach, and smart automation.
+</p>
+
+<a href="#contact" class="btn">Book Free Growth Audit</a>
+<a href="#services" class="btn btn-outline">Explore Services</a>
+</div>
+
+<div class="hero-box">
+<h3>Why Thraizo?</h3>
+<div>✔ Personalized outreach, not spam</div>
+<div>✔ AI-assisted prospect research</div>
+<div>✔ Fast execution</div>
+<div>✔ Founder-level support</div>
+<div>✔ Predictable pipeline systems</div>
+</div>
+
+</div>
+</section>
+
+<section class="light">
+<div class="container">
+<h2>Growth Shouldn't Depend Only on Referrals</h2>
+<p>Many great businesses struggle because lead generation is inconsistent.</p>
+
+<div class="cards">
+<div class="card">Founder handles sales personally</div>
+<div class="card">Leads are low quality</div>
+<div class="card">No repeatable outreach system</div>
+<div class="card">Growth stalls after referrals slow down</div>
+</div>
+
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+<h2>Services</h2>
+
+<div class="cards">
+<div class="card">AI Prospect Research</div>
+<div class="card">Cold Email Campaigns</div>
+<div class="card">LinkedIn Outreach</div>
+<div class="card">Follow-up Automation</div>
+<div class="card">Appointment Setting</div>
+<div class="card">CRM Pipeline Setup</div>
+</div>
+
+</div>
+</section>
+
+<section class="light">
+<div class="container">
+<h2>Simple 3-Step System</h2>
+
+<div class="steps">
+
+<div class="step">
+<div class="step-number">01</div>
+<h3>Audit</h3>
+<p>We identify your market, offer and best growth angle.</p>
+</div>
+
+<div class="step">
+<div class="step-number">02</div>
+<h3>Build</h3>
+<p>We create prospect lists, campaigns and systems.</p>
+</div>
+
+<div class="step">
+<div class="step-number">03</div>
+<h3>Book Meetings</h3>
+<p>You focus on closing while pipeline grows.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container contact-box">
+
+<h2>Ready For More Qualified Calls?</h2>
+
+<p>
+Let's build a predictable client acquisition system for your business.
+</p>
+
+<div class="contact-card">
+<p><strong>Email:</strong> <a href="mailto:hi@thraizo.com">hi@thraizo.com</a></p>
+<br>
+<p><strong>WhatsApp:</strong> <a href="https://wa.me/917061537957">+91 70615 37957</a></p>
+</div>
+
+</div>
+</section>
+
+<footer>
+<div class="container">
+© 2026 Thraizo.com — AI Growth Systems
+</div>
+</footer>
+
 </body>
 </html>
