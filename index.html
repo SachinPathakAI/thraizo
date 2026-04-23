@@ -157,7 +157,7 @@
       position: absolute;
       inset: -160px -10% auto -10%;
       height: 980px;
-      z-index: 0;
+      z-index: -1;
       overflow: hidden;
       pointer-events: none;
     }
@@ -362,9 +362,13 @@
     .hero {
       position: relative;
       padding: 110px 0 72px;
+      overflow: hidden;
+      isolation: isolate;
     }
 
     .hero-grid {
+      position: relative;
+      z-index: 3;
       display: grid;
       grid-template-columns: minmax(0, 1.03fr) minmax(360px, 0.76fr);
       align-items: center;
